@@ -1,0 +1,61 @@
+.game {
+   width: 100%;
+   padding:16px 20%;
+   color:white;
+}
+
+.game_background {
+  display: flex;
+  background-color: white;
+}
+
+.game_background table {
+  margin-top: 15px;
+  border-collapse: collapse;
+}
+
+.game_background table td{
+   width: 32px;
+   height: 32px;
+   padding: 0;
+   margin: 0;
+}
+
+.orange {
+  background-color: orange;
+  width: 100%;
+  height:100%;
+}
+
+.green {
+  background: linear-gradient(99deg, #015800, #56a81e);
+  background-size: 400% 400%;
+  -webkit-animation: SnakeBackground 0s ease infinite;
+  -moz-animation: SnakeBackground 0s ease infinite;
+  -o-animation: SnakeBackground 0s ease infinite;
+  animation: SnakeBackground 0s ease infinite;
+
+  width: 100%;
+  height:100%;
+}
+
+@-webkit-keyframes SnakeBackground {
+  0%{background-position:91% 0%}
+  50%{background-position:10% 100%}
+  100%{background-position:91% 0%}
+}
+@-moz-keyframes SnakeBackground {
+  0%{background-position:91% 0%}
+  50%{background-position:10% 100%}
+  100%{background-position:91% 0%}
+}
+@-o-keyframes SnakeBackground {
+  0%{background-position:91% 0%}
+  50%{background-position:10% 100%}
+  100%{background-position:91% 0%}
+}
+@keyframes SnakeBackground {
+  0%{background-position:91% 0%}
+  50%{background-position:10% 100%}
+  100%{background-position:91% 0%}
+}

@@ -1,31 +1,204 @@
+.Canvas {
+  background: rgb(51,38,38);
+  background: linear-gradient(103deg, rgba(51,38,38,1) 29%, rgba(177,61,61,1) 69%);
+  color: white;
+}
+
+.formulario {
+  margin-left: 25%;
+  margin-right: 25%;
+  max-width: 50%;
+}
+
+/* CSS TAJERTAS PROFILE */
+
+.Profile-Content {
+  text-decoration: none;
+  background-color: #000000;
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-top: 10px;
+  z-index: 1;
+  color:red;
+}
+
+/* CSS TARJETAS HOMEPAGE */
+
+.home {
+  z-index: 1;
+  background: linear-gradient(37deg, #e32e2e, #000000);
+  background-size: 400% 400%;
+
+  -webkit-animation: HomeBackground 0s ease infinite;
+  -moz-animation: HomeBackground 0s ease infinite;
+  -o-animation: HomeBackground 0s ease infinite;
+  animation: HomeBackground 0s ease infinite;
+}
+
+.Card-Content {
+  text-decoration: none;
+  background-color: #000000;
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-top: 10px;
+  z-index: 1;
+} 
+
+.Card-Font, .Card-Title {
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 20px;
+}
+
+.Card-Font:hover, .Card-Title:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 20px;
+  color: #000000;
+}
+
+@media screen and (min-width: 601px) {
+  .Card-Content {
+    min-height: 300px;
+  }
+  .Card-Content p {
+    font-size: 25px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .Card-Content{
+    min-height: 200px;
+    margin-left:10%;
+    margin-right: 10%;
+  }
+  .Card-Content p {
+    font-size: 15px;
+  }
+}
+
+/* CSS BUSCADOR */
+
+.Item {
+  min-width: 300px;
+  max-width: auto;
+  background-color: white;
+  border: 1px solid #000000;
+}
+
+.Item li {
+  min-height: 30px;
+  color:black;
+}
+
+.Item img {
+  float: left;
+  height: 25px;
+}
+
+.form-control:focus {
+  border-color: red;
+  box-shadow:#000000;
+}
+
+/* CSS REDIRECCIONAMIENTO */
+
+a {
+  color:white;
+}
+
+a:hover {
+  color: red;
+}
+
+/* CSS ELEMENTOS DE CADA VIDEOJUEGO*/
+
+.badge{
+  background-color: #000000;
+}
+
+.heading-line {
+  line-height: 0.8em;
+}
+
+.details-background {
+  border-radius: 15px;
+}
+
+.gallery-img-style {
+  padding: 10px;
+  vertical-align: middle;
+  min-height: auto;
+  min-width: 464px;
+  width: auto;
+  max-width: 100%;
+}
+
+.tag-badge-margin {
+  margin-right: 0.2em;
+}
+
+.suggested-game-style {
+  height: 200px;
+  overflow: hidden;
+}
+
+.suggestion-img-style {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+
+.suggestion-h2 {
+  text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+}
+
+.img-style {
+  width: 100%;
+}
+
+.dev-avatar-style {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+}
+
+.long-content {
+  overflow: hidden;
+}
+
+.bg-white {
+  background-color: #ffffff;
+}
+
+
+.game {
+  height: 754px;
+}
+
+/* CSS TRONCAL*/
+
 .App {
   text-align: center;
+  overflow-x: hidden;
+  background: linear-gradient(149deg, #000000, #ff0000, #ff0000, #ff0000);
+  background-size: 400% 400%;
+
+  -webkit-animation: AppBackground 0s ease infinite;
+  -moz-animation: AppBackground 0s ease infinite;
+  -o-animation: AppBackground 0s ease infinite;
+  animation: AppBackground 0s ease infinite;
 }
 
 .App-logo {
-  height: 40vmin;
+  height: auto;
   pointer-events: none;
 }
+
+/* KEYFRAMES Y MEDIAS */
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
 }
 
 @keyframes App-logo-spin {
@@ -35,4 +208,46 @@
   to {
     transform: rotate(360deg);
   }
+}
+/*APP*/
+@-webkit-keyframes AppBackground {
+  0%{background-position:0% 18%}
+  50%{background-position:100% 83%}
+  100%{background-position:0% 18%}
+}
+@-moz-keyframes AppBackground {
+  0%{background-position:0% 18%}
+  50%{background-position:100% 83%}
+  100%{background-position:0% 18%}
+}
+@-o-keyframes AppBackground {
+  0%{background-position:0% 18%}
+  50%{background-position:100% 83%}
+  100%{background-position:0% 18%}
+}
+@keyframes AppBackground {
+  0%{background-position:0% 18%}
+  50%{background-position:100% 83%}
+  100%{background-position:0% 18%}
+}
+/*HOME*/
+@-webkit-keyframes HomeBackground {
+  0%{background-position:0% 11%}
+  50%{background-position:100% 90%}
+  100%{background-position:0% 11%}
+}
+@-moz-keyframes HomeBackground {
+  0%{background-position:0% 11%}
+  50%{background-position:100% 90%}
+  100%{background-position:0% 11%}
+}
+@-o-keyframes HomeBackground {
+  0%{background-position:0% 11%}
+  50%{background-position:100% 90%}
+  100%{background-position:0% 11%}
+}
+@keyframes HomeBackground {
+  0%{background-position:0% 11%}
+  50%{background-position:100% 90%}
+  100%{background-position:0% 11%}
 }
