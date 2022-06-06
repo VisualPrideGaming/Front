@@ -169,6 +169,18 @@ a:hover {
   background-color: #ffffff;
 }
 
+.imageCarousel {
+  height: 720;
+  width: 720;
+}
+
+.presentation  {
+  height: 812px;
+}
+
+.nosotrosCarousel{
+  color:black;
+}
 
 .game {
   height: 754px;
