@@ -6,12 +6,14 @@ export default function Trending({ data, value }) {
   const [detailsData, setDetailsData] = useState(null);
 
   const getRawgApi = useCallback(async () => {
+    
     try {
-      //SE RECOGEN LOS DATOS ESPECIFICOS DE CADA JUEGO
-
-      // CAMBIAR POR EL MÉTODO DE BUSQUEDA DA LA BBDD NUEVA
-      
-      const response = await fetch(`/api/videogame/${data[value].id}`);
+      //SE RECOGEN LOS DATOS DE LA DIRECCIÓN DE LA API
+      const response = await fetch(`http://localhost:3003/games/${data[value].id}` , {
+        headers: new Headers({
+          'Authorization': 'Bearer julenverne'
+      }), 
+      });
       const json = await response.json();
       setDetailsData(json);
     } catch (e) {
