@@ -19,7 +19,7 @@ export default function Videogame() {
     // en la api con ese id
     try {
       //SE RECOGEN LOS DATOS DE LA DIRECCIÓN DE LA API
-      const response = await fetch(`http://localhost:3003/games/${id}` , {
+      const response = await fetch(`http://localhost:3003/game?game=${id}` , {
         headers: new Headers({
           'Authorization': 'Bearer julenverne'
       }), 
@@ -57,12 +57,12 @@ export default function Videogame() {
           <HeaderOnVideogames data={data}>{(document.title = `${data.name}`)}</HeaderOnVideogames>
           <Overview data={data} />
           <section id='storesAndReviews' className='row'>   
-            <Reviews data={data} />
+            {/* <Reviews data={data} /> */}
           </section>
           <section id='misc' className='row'>
-            <Screenshots data={data} />
+            {/* <Screenshots data={data} /> */}
           </section>
-          <SimilarVideogames data={data} />
+          {/* <SimilarVideogames data={data} /> */}
         </main>
       ) : (
         <VideogameLoad>{(document.title = 'Cargando juego...')}</VideogameLoad>

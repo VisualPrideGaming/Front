@@ -2,7 +2,7 @@ import Header from './components/header/header';
 import Home from './components/home/home';
 import Minigames from './components/minigames/minigames';
 import Footer from './components/footer/footer';
-// import Videogame from './components/videogame/videogame';
+import Videogame from './components/videogame/videogame';
 // import Profile from './components/profile/profile';
 // import Login from './components/Login';
 // import Register from './components/Register';
@@ -21,7 +21,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/inicio" element={<Home />} />
-          {/*<Route path='/videogame/:id' element={<Videogame />} />*/}
+          <Route path='/videogame/:id' element={<Videogame />} />
           <Route path="/minijuegos" element={<Minigames />} />
           {/* <Route path="/perfil" element={<Profile />} /> */}
           {/* <Route path="/login" element={<Login />} /> */}
