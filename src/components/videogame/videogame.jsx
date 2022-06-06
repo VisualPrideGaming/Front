@@ -18,7 +18,12 @@ export default function Videogame() {
     // Se recoge el :id de la dirección para hacer la busqueda
     // en la api con ese id
     try {
-      const response = await fetch(`/api/videogame/${id}`);
+      //SE RECOGEN LOS DATOS DE LA DIRECCIÓN DE LA API
+      const response = await fetch(`http://localhost:3003/games/${id}` , {
+        headers: new Headers({
+          'Authorization': 'Bearer julenverne'
+      }), 
+      });
       const json = await response.json();
       setData(json);
       setDataIsReady(true);
