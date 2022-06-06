@@ -22,10 +22,10 @@ export default function Overview({ data }) {
   const getPoster = () => {
     try {
       let poster;
-      if (data.background_image) {
-        data.background_image.match(/media\/screenshots/)
-          ? (poster = data.background_image.replace('media/screenshots', 'media/crop/600/400/screenshots'))
-          : (poster = data.background_image.replace('media/games', 'media/crop/600/400/games'));
+      if (data.image) {
+        data.image.match(/media\/screenshots/)
+          ? (poster = data.image.replace('media/screenshots', 'media/crop/600/400/screenshots'))
+          : (poster = data.image.replace('media/games', 'media/crop/600/400/games'));
       }
       return poster;
     } catch (e) {
@@ -88,7 +88,7 @@ export default function Overview({ data }) {
   function Genre({ data, index }) {
     const genreElement = data;
     const i = index;
-    return <span key={i}>{`${i ? ', ' : ''} ${genreElement.name}`}</span>;
+    return <span key={i}>{`${i ? ', ' : ''} ${genreElement}`}</span>;
   }
 
   return (
@@ -102,13 +102,13 @@ export default function Overview({ data }) {
           <h4>Información:</h4>
           <ul className='list-unstyled'>
             <li>
-              <strong>Desarroladora:</strong>{' '}
+              {/* <strong>Desarroladora:</strong>{' '}
               {data.developers.map((companyElement, i) => (
                 <Company key={companyElement.id} data={companyElement} index={i} />
-              ))}
+              ))} */}
             </li>
             <li>
-              <strong>Duración:</strong> {getPlaytime() && getPlaytime() !== 0 ? getPlaytime() + ' hours' : '-'}
+              {/* <strong>Duración:</strong> {getPlaytime() && getPlaytime() !== 0 ? getPlaytime() + ' hours' : '-'} */}
             </li>
             <li>
               <strong>Género:</strong>{' '}
@@ -122,7 +122,7 @@ export default function Overview({ data }) {
             <li>
               <strong>Valoración:</strong> ★{getVotes()}/5
             </li>
-            {getWebsite().website ? (
+            {/* {getWebsite().website ? (
               <Fragment>
                 <li>
                   <strong>Web:</strong>{' '}
@@ -133,7 +133,7 @@ export default function Overview({ data }) {
                   </a>
                 </li>
               </Fragment>
-            ) : null}
+            ) : null} */}
           </ul>
         </div>
       </summary>
@@ -143,16 +143,16 @@ export default function Overview({ data }) {
           <p className='mb-2' dangerouslySetInnerHTML={{ __html: dompurify.sanitize(getOverview()) }}></p>
         </div>
         <div>
-          {data.devteam.length > 0 ? (
+          {/* {data.devteam.length > 0 ? (
             <Fragment>
               <h4>Creadores:</h4>
               <ul className='row list-unstyled list-group list-group-horizontal'>
-                {data.devteam.map(devteamMember => (
+               {data.devteam.map(devteamMember => (
                   <DevteamMember key={devteamMember.id} data={devteamMember} />
-                ))}
+                ))} 
               </ul>
             </Fragment>
-          ) : null}
+          ) : null} */}
         </div>
       </article>
     </section>

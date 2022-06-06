@@ -9,7 +9,7 @@ export default function Trending({ data, value }) {
     
     try {
       //SE RECOGEN LOS DATOS DE LA DIRECCIÓN DE LA API
-      const response = await fetch(`http://localhost:3003/games/${data[value].id}` , {
+      const response = await fetch(`http://localhost:3003/game?game=${data[value].id}` , {
         headers: new Headers({
           'Authorization': 'Bearer julenverne'
       }), 
@@ -69,7 +69,7 @@ export default function Trending({ data, value }) {
   };
 
   const selectedVideogameFn = () => {
-    const videogame = `/videogame/${data[value].id}-${data[value].name}`;
+    const videogame = `/videogame/${data[value].id}`;
     return videogame;
   };
 
