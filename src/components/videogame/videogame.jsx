@@ -9,7 +9,7 @@ import Reviews from './videogameReviews';
 
 //  MODIFICAR CON LOS DATOS NUEVOS
 
-/*export default function Videogame() {
+export default function Videogame() {
   const { id } = useParams();
   const [data, setData] = useState(null);
   const [dataIsReady, setDataIsReady] = useState(false);
@@ -64,4 +64,4 @@ import Reviews from './videogameReviews';
       )}
     </Fragment>
   );
-}*/
+}

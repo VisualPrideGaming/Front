@@ -9,7 +9,6 @@ export default function Trending({ data, value }) {
     try {
       //SE RECOGEN LOS DATOS ESPECIFICOS DE CADA JUEGO
 
-
       // CAMBIAR POR EL MÉTODO DE BUSQUEDA DA LA BBDD NUEVA
       
       const response = await fetch(`/api/videogame/${data[value].id}`);
