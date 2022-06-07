@@ -5,8 +5,8 @@ import Footer from './components/footer/footer';
 import Videogame from './components/videogame/videogame';
 import Contact from './components/contact/contact';
 import Profile from './components/profile/profile';
-// import Login from './components/Login';
-// import Register from './components/Register';
+import Login from './components/Login';
+import Register from './components/Register';
 
 import "bootstrap/dist/css/bootstrap.css"
 
@@ -26,8 +26,8 @@ function App() {
           <Route path="/minijuegos" element={<Minigames />} />
           <Route path="/nosotros" element={<Contact />} />
           <Route path="/perfil" element={<Profile />} />
-          {/* <Route path="/login" element={<Login />} /> */}
-          {/* <Route path="/register" element={<Register />} /> */}
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
         </Routes>
       </Router>
       <Footer/>

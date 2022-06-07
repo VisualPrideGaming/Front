@@ -10,6 +10,10 @@
   max-width: 50%;
 }
 
+.container {
+  min-height: 462px;
+}
+
 /* CSS TAJERTAS PROFILE */
 
 .Profile-Content {
