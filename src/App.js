@@ -7,7 +7,7 @@ import Contact from './components/contact/contact';
 import Profile from './components/profile/profile';
 import Login from './components/Login';
 import Register from './components/Register';
-
+import Presentation from './components/presentation/presentation';
 import "bootstrap/dist/css/bootstrap.css"
 
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'; 
@@ -20,7 +20,7 @@ function App() {
       <Header/>
       <Router>
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Presentation />} />
           <Route path="/inicio" element={<Home />} />
           <Route path='/videogame/:id' element={<Videogame />} />
           <Route path="/minijuegos" element={<Minigames />} />

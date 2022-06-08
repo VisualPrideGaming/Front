@@ -36,7 +36,7 @@ const Header = () => {
     return(
         <header>
             <Nav fill variant="pills" activeKey="1">
-                <a href="/inicio"><img src={skull} alt="skull" width="50" height="50" className="App-logo"/></a>
+                <a href="/"><img src={skull} alt="skull" width="50" height="50" className="App-logo"/></a>
                 <Nav.Item>
                     <Nav.Link href="/inicio">Home</Nav.Link>
                 </Nav.Item>
