@@ -47,11 +47,11 @@ const Header = () => {
                 <Nav.Item>
                     <PageOption placement="end" name="¿Quienes somos?" />
                 </Nav.Item>
-                <NavDropdown title="Perfil" id="nav-dropdown">
-                    <NavDropdown.Item href="/perfil">Ver Perfil</NavDropdown.Item>
-                    <NavDropdown.Item>Cambiar Contraseña</NavDropdown.Item>
+                <NavDropdown title="Admin" id="nav-dropdown">
+                    <NavDropdown.Item href="/perfil">Ver Perfiles</NavDropdown.Item>
+                    <NavDropdown.Item>Crear datos de usuario</NavDropdown.Item>
                     <NavDropdown.Divider />
-                    <NavDropdown.Item>Borrar cuenta</NavDropdown.Item>
+                    <NavDropdown.Item>Borrar datos de usuario</NavDropdown.Item>
                 </NavDropdown>
                 <Nav.Item>
                     <Search/>

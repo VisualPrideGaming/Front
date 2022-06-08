@@ -10,6 +10,10 @@
   max-width: 50%;
 }
 
+.container {
+  min-height: 462px;
+}
+
 /* CSS TAJERTAS PROFILE */
 
 .Profile-Content {
@@ -185,6 +189,15 @@ a:hover {
 .game {
   height: 754px;
 }
+
+.nosotros{
+  margin-top: 2%;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-bottom: 6%;
+  min-height: 360px;
+}
+
 
 /* CSS TRONCAL*/
 
