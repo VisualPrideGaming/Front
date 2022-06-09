@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useCallback } from "react";
+import {Data} from "./userData";
 import 'bootstrap/dist/css/bootstrap.css';
 import ProfileLoad from "./profileLoad";
 import { Card } from "react-bootstrap";
