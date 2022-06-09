@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback } from "react";
 import 'bootstrap/dist/css/bootstrap.css';
-import userData from "./userData";
+import {Data, Reviews} from "./userData";
 import ProfileLoad from "./profileLoad";
 import { Card } from "react-bootstrap";
 
@@ -46,7 +46,9 @@ const Profile = () => {
                             <Card.Body>
                             <Card.Title>Nombre: {users.nickname}</Card.Title>
                             <Card.Text>
-                                <userData />
+                                Rol: {users.rol}
+                                Juegos: <Data id={users.id} />
+                                Reviews: <Reviews id={users.id}/>
                             </Card.Text>
                             </Card.Body>
                         </Card.ImgOverlay>
