@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useCallback } from "react";
 import 'bootstrap/dist/css/bootstrap.css';
-import userData from "./userData";
 import ProfileLoad from "./profileLoad";
 import { Card } from "react-bootstrap";
 
@@ -56,7 +55,7 @@ const ProfileManagement = () => {
                             <Card.Body>
                             <Card.Title>Nombre: {users.nickname}</Card.Title>
                             <Card.Text>
-                                <userData />
+                                <Data id={users.id}/>
                             </Card.Text>
                             </Card.Body>
                         </Card.ImgOverlay>
