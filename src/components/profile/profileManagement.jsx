@@ -58,6 +58,9 @@ const ProfileManagement = () => {
                             <Card.Text>
                                 <Data id={users.id}/>
                             </Card.Text>
+                            {/* Aqui habría otro mapeo con cada review y cada juego con su estado
+                            en el que se añaden los componentes forms para crear nuevos data y reviews y deletes, abajo
+                            dejo comentado un ejemplo de delete*/}
                             </Card.Body>
                         </Card.ImgOverlay>
                     </Card>
@@ -69,3 +72,32 @@ const ProfileManagement = () => {
 };
 
 export default ProfileManagement;
+
+
+/* EJEMPLO DELETE
+
+El nuestro tiene dos parámetros, he echado un ojo a la documentación y videos que he visto
+pero no he conseguido apañarmelas para los dos parametros
+(userId y gameId)
+
+const handleDelete = id => {
+        const requestInit = {
+            method: 'DELETE'
+        }
+        
+        fetch('localhost:3003/users/reviews' + id, requestInit)
+            .then(res => res.text())
+            .then(res => console.log(res))
+    }
+
+const handleDelete = id => {
+        const requestInit = {
+            method: 'DELETE'
+        }
+        
+        fetch('localhost:3003/users/data' + id, requestInit)
+            .then(res => res.text())
+            .then(res => console.log(res))
+    }
+
+*/
