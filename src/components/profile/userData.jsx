@@ -7,7 +7,7 @@ export function Data(id) {
     const getRawgApi = useCallback(async () => {
         try {
           //SE RECOGEN LOS DATOS DE LA DIRECCIÓN DE LA API
-          const response = await fetch(`localhost:3003/users/data?user=${id}` , {
+          const response = await fetch(`http://localhost:3003/users/data?user=${id.id}` , {
             headers: new Headers({
               'Authorization': 'Bearer julenverne'
           }), 
@@ -24,14 +24,44 @@ export function Data(id) {
       }, [getRawgApi]);
 
     return (
+      <div>
         <div className="data">
-            {data.map((game) => (
+            {data?.comprado?.map((game) => (
                 <div>
-                    <Card.Text>Juego: {game.game_name} </Card.Text>
-                    <Card.Text>Estado: {game.status_game} </Card.Text>
+                    <Card.Text>Juego: {game.name} </Card.Text>
+                    <Card.Text>Comprado</Card.Text>
                 </ div>
             ))}
         </div>
+
+
+        <div className="data">
+            {data?.deseados?.map((game) => (
+              <div>
+                    <Card.Text>Juego: {game.name} </Card.Text>
+                    <Card.Text>Deseado</Card.Text>
+                </ div>
+            ))}
+        </div>
+
+        <div className="data">
+            {data?.pasados?.map((game) => (
+              <div>
+                    <Card.Text>Juego: {game.name} </Card.Text>
+                    <Card.Text>Pasado</Card.Text>
+                </ div>
+            ))}
+        </div>
+
+        <div className="data">
+            {data?.favoritos?.map((game) => (
+              <div>
+                    <Card.Text>Juego: {game.name} </Card.Text>
+                    <Card.Text>Favorito</Card.Text>
+                </ div>
+            ))}
+        </div>
+      </div>
     )
 }
 
@@ -41,7 +71,7 @@ export function Reviews(id) {
     const getRawgApi = useCallback(async () => {
         try {
           //SE RECOGEN LOS DATOS DE LA DIRECCIÓN DE LA API
-          const response = await fetch(`localhost:3003/users/reviews?user=${id}` , {
+          const response = await fetch(`http://localhost:3003/users/reviews?user=${id.id}` , {
             headers: new Headers({
               'Authorization': 'Bearer julenverne'
           }), 
@@ -59,9 +89,9 @@ export function Reviews(id) {
 
       return(
           <div className="reviews">
-            {data.map((game) => (
+            {data?.reviews?.map((game) => (
                 <div>
-                    <Card.Text>Juego: {game.game_name} </Card.Text>
+                    <Card.Text>Juego: {game.name} </Card.Text>
                     <Card.Text>Review: {game.score}<br/>{game.review}</Card.Text>
                 </ div>
             ))}

@@ -13,7 +13,12 @@ export default function Search() {
       if (keyword !== '') {
         // Recoge una cantidad de juegos que mantengan lo escrito por pantalla.
         try {
-          const response = await fetch(`/api/videogameAutocomplete?q=${keyword.toLowerCase()}`);
+          const response = await fetch(`http://localhost:3003/games/filter?search=${keyword.toLowerCase()}` 
+          , {
+            headers: new Headers({
+              'Authorization': 'Bearer julenverne'
+          }), 
+          });
           const json = await response.json();
           setData(json);
           setDataIsReady(true);

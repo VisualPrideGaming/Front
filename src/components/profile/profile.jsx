@@ -8,13 +8,6 @@ const Profile = () => {
 
     const [data, setData] = useState(null);
     const [dataIsReady, setDataIsReady] = useState(false);
-    const [usersCount] = useState([
-        { id: 1, value: 0 },
-        { id: 2, value: 1 },
-        { id: 3, value: 2 },
-        { id: 4, value: 3 },
-        { id: 5, value: 4 }
-      ]);
 
     const getRawgApi = useCallback(async () => {
         try {
@@ -38,10 +31,10 @@ const Profile = () => {
 
     return (
         <div className="Profile">
-            {usersCount.map(users => 
+            {data?.map(users => 
                 dataIsReady ? (
                     <Card>
-                        <Card.Img src={users.image_user} className="Card-Img"/>
+                        <Card.Img src={users.image} className="Card-Img"/>
                         <Card.ImgOverlay>
                             <Card.Body>
                             <Card.Title>Nombre: {users.nickname}</Card.Title>

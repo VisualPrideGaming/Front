@@ -48,7 +48,7 @@ const Header = () => {
                     <PageOption placement="end" name="¿Quienes somos?" />
                 </Nav.Item>
                 <NavDropdown title="Admin" id="nav-dropdown">
-                    <NavDropdown.Item href="/gestion">Ver Perfiles</NavDropdown.Item>
+                    <NavDropdown.Item href="/perfil">Ver Perfiles</NavDropdown.Item>
                     <NavDropdown.Divider />
                     <NavDropdown.Item>Gestión de perfiles</NavDropdown.Item>
                 </NavDropdown>

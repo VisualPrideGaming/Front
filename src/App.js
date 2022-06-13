@@ -25,7 +25,7 @@ function App() {
           <Route path="/minijuegos" element={<Minigames />} />
           <Route path="/nosotros" element={<Contact />} />
           <Route path="/perfil" element={<Profile />} />
-          <Route path="/gestion" element={<ProfileManagement />}/>
+          {/* <Route path="/gestion" element={<ProfileManagement />}/> */}
         </Routes>
       </Router>
       <Footer/>
