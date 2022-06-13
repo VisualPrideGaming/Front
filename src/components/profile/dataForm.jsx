@@ -24,9 +24,13 @@ const DataForm = ({data, setData}) => {
             body: JSON.stringify(data)
         }
         
-        fetch('localhost:3003/users/data', requestInit)
+        fetch('http://localhost:3003/users/data', requestInit)
             .then(res => res.json())
-            .then(res => console.log(res))
+            .then(res => console.log(res)) , {
+                headers: new Headers({
+                  Authorization: 'Bearer julenverne'
+              }), 
+              }
         
         setData({
             userId: ' ',
