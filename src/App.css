@@ -48,6 +48,16 @@
   z-index: 1;
 } 
 
+.card-img-overlay {
+  position: relative !important; 
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  border-radius: calc(0.25rem- 1px);
+}
+
 .Card-Font, .Card-Title {
   background-color: rgba(0, 0, 0, 0.8);
   border-radius: 20px;

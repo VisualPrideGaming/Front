@@ -58,8 +58,8 @@ export default function Search() {
               <div className='w-auto text-dark position-absolute dropdown-position py-2 px-2'>
                 <ul className='list-unstyled mb-0'>
                   {/*Se muestran 8 resultados mapeados la clase SearchDropdown y en caso de no haber coincidecias se devuelve el ItemNoResult */
-                    data.count >= 1 ? (
-                    data.results.slice(0, 8).map(result => <SearchDropdownItem key={result.id} result={result} />)
+                    data.length ? (
+                    data.slice(0, 8).map(result => <SearchDropdownItem key={result.id} result={result} />)
                   ) : (
                     <SearchDropdownItemNoResult />
                   )}

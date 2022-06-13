@@ -30,10 +30,10 @@ const Profile = () => {
       }, [getRawgApi]);
 
     return (
-        <div className="Profile">
+        <div >
             {data?.map(users => 
                 dataIsReady ? (
-                    <Card>
+                    <Card key={users.id}>
                         <Card.Img src={users.image} className="Card-Img"/>
                         <Card.ImgOverlay>
                             <Card.Body>

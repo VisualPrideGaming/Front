@@ -9,7 +9,7 @@ export function Data(id) {
           //SE RECOGEN LOS DATOS DE LA DIRECCIÓN DE LA API
           const response = await fetch(`http://localhost:3003/users/data?user=${id.id}` , {
             headers: new Headers({
-              'Authorization': 'Bearer julenverne'
+              Authorization: `Bearer julenverne`
           }), 
           });
           const json = await response.json();
@@ -27,38 +27,47 @@ export function Data(id) {
       <div>
         <div className="data">
             {data?.comprado?.map((game) => (
-                <div>
-                    <Card.Text>Juego: {game.name} </Card.Text>
+                
+                  <Card key={`${game.id}-comprado`}>
+                    <Card.Text>Juego: {game.game_name} </Card.Text>
                     <Card.Text>Comprado</Card.Text>
-                </ div>
+                  </Card>
+                
             ))}
         </div>
 
 
         <div className="data">
             {data?.deseados?.map((game) => (
-              <div>
-                    <Card.Text>Juego: {game.name} </Card.Text>
+              
+                <Card key={`${game.id}-deseado`}>  
+                    <Card.Text>Juego: {game.game_name} </Card.Text>
                     <Card.Text>Deseado</Card.Text>
-                </ div>
+                </Card>
+              
             ))}
         </div>
 
         <div className="data">
             {data?.pasados?.map((game) => (
-              <div>
-                    <Card.Text>Juego: {game.name} </Card.Text>
+             
+                <Card key={`${game.id}-pasado`}>
+                    <Card.Text>Juego: {game.game_name} </Card.Text>
                     <Card.Text>Pasado</Card.Text>
-                </ div>
+                </Card>  
+               
             ))}
         </div>
 
         <div className="data">
             {data?.favoritos?.map((game) => (
-              <div>
-                    <Card.Text>Juego: {game.name} </Card.Text>
+              
+                <Card key={`${game.id}-favorito`}>
+                  
+                    <Card.Text>Juego: {game.game_name} </Card.Text>
                     <Card.Text>Favorito</Card.Text>
-                </ div>
+                </Card>
+              
             ))}
         </div>
       </div>
@@ -73,7 +82,7 @@ export function Reviews(id) {
           //SE RECOGEN LOS DATOS DE LA DIRECCIÓN DE LA API
           const response = await fetch(`http://localhost:3003/users/reviews?user=${id.id}` , {
             headers: new Headers({
-              'Authorization': 'Bearer julenverne'
+              Authorization: 'Bearer julenverne'
           }), 
           });
           const json = await response.json();
@@ -90,10 +99,12 @@ export function Reviews(id) {
       return(
           <div className="reviews">
             {data?.reviews?.map((game) => (
-                <div>
-                    <Card.Text>Juego: {game.name} </Card.Text>
-                    <Card.Text>Review: {game.score}<br/>{game.review}</Card.Text>
-                </ div>
+                
+                  <Card key={`${game.id}-reviews`}>
+                    <Card.Text>Juego: {game.game_name} </Card.Text>
+                    <Card.Text>Puntuación: {game.score}<br/>{game.review}</Card.Text>
+                  </Card>
+            
             ))}
           </div>
       )

@@ -3,7 +3,7 @@ import { NavDropdown } from 'react-bootstrap';
 
 export default function SearchDropdownItem({ result }) {
   return (
-    <NavDropdown.Item  className='Item' href={`/videogame/${result.id}-${result.slug}`}>
+    <NavDropdown.Item  className='Item' href={`/videogame/${result.id}`}>
         <li key={result.id + 'li'}>
           {result.background_image ? (
             <img
