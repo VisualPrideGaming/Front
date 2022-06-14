@@ -6,7 +6,7 @@ const DataForm = ({data, setData}) => {
     const handleChange = e => {
         setData({
             ...data,
-            [e.target.name]: e.target.value
+            status: e.target.value
         })
     }
 
@@ -16,21 +16,21 @@ const DataForm = ({data, setData}) => {
         try {
             const requestInit = {
               method: 'POST',
-              headers: {'Content-Type': 'application/json'},
-              body: JSON.stringify(data)
+              headers: {'Content-Type': 'application/json' , 'Authorization': 'Bearer julenverne'},
+              body: JSON.stringify({
+                userId: 1,
+                gameId: data.id,
+                status: data.status
+              })
             }
-            fetch('http://localhost:3003/users/data', requestInit, {
-                headers: new Headers({
-                    'Authorization': 'Bearer julenverne'
-                }),
-            })
+            fetch('http://localhost:3003/users/data', requestInit)
               .then(res => res.json())
               .then(res => console.log(res));
 
             setData({
               userId: 1,
-              gameId: data.gameId,
-              status: ' '
+              gameId: data.id,
+              status: ''
             })
         } catch (e) {
           console.error(e)
@@ -44,22 +44,22 @@ const DataForm = ({data, setData}) => {
                 <Form.Label>Estado del juego</Form.Label>
                 <Form.Select
                   required="required"
-                  value={status}
+                  value={status} 
                   onChange={handleChange}
                 >
                   <option value="" hidden>
                     ---
                   </option>
-                  <option key="comprado" value="comprado">
+                  <option key="comprado" value="Comprado">
                     Comprado
                   </option>
-                  <option key="deseados" value="deseados">
+                  <option key="deseados" value="Deseados">
                     Deseado
                   </option>
-                  <option key="favorito" value="favorito">
+                  <option key="favorito" value="Favorito">
                     Favorito
                   </option>
-                  <option key="pasados" value="pasados">
+                  <option key="pasados" value="Pasados">
                     Pasado
                   </option>
                 </Form.Select>

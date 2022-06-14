@@ -29,7 +29,7 @@ const Home = () => {
         //SE RECOGEN LOS DATOS DE LA DIRECCIÓN DE LA API
         const response = await fetch('http://localhost:3003/games/top' , {
           headers: new Headers({
-            'Authorization': 'Bearer julenverne'
+            Authorization: 'Bearer julenverne'
         }), 
         });
         const json = await response.json();

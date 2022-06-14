@@ -19,7 +19,7 @@ export default function Videogame() {
     // en la api con ese id
     try {
       //SE RECOGEN LOS DATOS DE LA DIRECCIÓN DE LA API
-      const response = await fetch(`http://localhost:3003/games?game=${id}` , {
+      const response = await fetch(`http://localhost:3003/game?game=${id}` , {
         headers: new Headers({
           'Authorization': 'Bearer julenverne'
       }), 

@@ -5,8 +5,14 @@ const ReviewForm =  ({data, setData}) => {
 
     const handleChange = e => {
         setData({
-            ...review,
-            [e.target.name]: e.target.value
+            ...data,
+            score: e.target.value
+        })
+    }
+    const handleChangeText = e => {
+        setData({
+            ...data,
+            review: e.target.value
         })
     }
 
@@ -16,23 +22,24 @@ const ReviewForm =  ({data, setData}) => {
 
         const requestInit = {
             method: 'POST',
-            headers: {'Content-Type': 'application/json'},
-            body: JSON.stringify(review)
+            headers: {'Content-Type': 'application/json', 'Authorization': 'Bearer julenverne'},
+            body: JSON.stringify({
+                "gameId": data.id,
+                "userId": 1,
+                "score": data.score,
+                "review": data.review
+            })
         }
         
-        fetch('localhost:3003/users/reviews', requestInit, {
-            headers: new Headers({
-                'Authorization': 'Bearer julenverne'
-            }),
-            })
+        fetch('http://localhost:3003/users/reviews', requestInit)
             .then(res => res.json())
             .then(res => console.log(res))
         
         setData({
-            gameId: data.gameId,
+            gameId: data.id,
             userId: 1,
-            score: ' ',
-            review: ' '
+            score: '',
+            review: ''
         })
     }
 
@@ -61,7 +68,7 @@ const ReviewForm =  ({data, setData}) => {
                   required="required"
                   placeholder="Introducir la review..."
                   value={review}
-                  onChange={handleChange}
+                  onChange={handleChangeText}
                 />
             </Form.Group>
             <Button type="submit">Enviar Review</Button> 
