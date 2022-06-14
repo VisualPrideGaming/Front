@@ -21,36 +21,12 @@ export default function HeaderOnVideogames({ data }) {
     }
   };
 
-  function PlatformBadge({ data }) {
-    const platformElement = data;
-    return <div className='badge badge-warning platform-badge-margin'>{platformElement.platform}</div>;
-  }
-
-  function Tag({ data }) {
-    const tag = data;
-    return <div className='badge badge-dark tag-badge-margin'>{tag}</div>;
-  }
-
   return (
     <header id='videogameHeader' border-bottom='1px' solid='#000'>
       <h2>
         {getTitle()}
         <span className='lead heading-line'> Lanzamiento: {getReleaseYear()} </span>
       </h2>
-      {/* {data.platforms.map((platformBadge, i) => (
-        <PlatformBadge key={i} data={platformBadge} />
-      ))}
-      {data.tags.length < 1 ? (
-        <section>
-          {' '}
-        </section>
-      ) : (
-        <section id='tags' className='my-2'>
-          {data.tags.map((tag, i) => (
-            <Tag key={i} data={tag} />
-          ))}
-        </section>
-      )} */}
     </header>
   );
 }

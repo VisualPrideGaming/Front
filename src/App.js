@@ -4,7 +4,6 @@ import Minigames from './components/minigames/minigames';
 import Footer from './components/footer/footer';
 import Videogame from './components/videogame/videogame';
 import Contact from './components/contact/contact';
-import ProfileManagement from './components/profile/profileManagement';
 import Profile from './components/profile/profile';
 import Presentation from './components/presentation/presentation';
 import "bootstrap/dist/css/bootstrap.css"
@@ -25,7 +24,6 @@ function App() {
           <Route path="/minijuegos" element={<Minigames />} />
           <Route path="/nosotros" element={<Contact />} />
           <Route path="/perfil" element={<Profile />} />
-          {/* <Route path="/gestion" element={<ProfileManagement />}/> */}
         </Routes>
       </Router>
       <Footer/>

@@ -10,20 +10,22 @@
   max-width: 50%;
 }
 
+
+
 .container {
   min-height: 462px;
 }
 
 /* CSS TAJERTAS PROFILE */
 
-.Profile-Content {
+.Profile {
   text-decoration: none;
-  background-color: #000000;
   margin-left: 20%;
   margin-right: 20%;
   margin-top: 10px;
   z-index: 1;
   color:red;
+  min-height: 802px;
 }
 
 /* CSS TARJETAS HOMEPAGE */

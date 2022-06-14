@@ -2,10 +2,10 @@ import React, { useState, useEffect, Fragment, useCallback } from 'react';
 import { useParams } from 'react-router-dom';
 import VideogameLoad from './videogameLoad';
 import Overview from './videogameOverview.jsx';
-import SimilarVideogames from './videogameSimilarVideogames';
 import HeaderOnVideogames from './videogameHeader';
-import Screenshots from './videogameScreenshots';
-import Reviews from './videogameReviews';
+import DataForm from './dataForm';
+import ReviewForm from './reviewForm';
+
 
 //  MODIFICAR CON LOS DATOS NUEVOS
 
@@ -19,7 +19,7 @@ export default function Videogame() {
     // en la api con ese id
     try {
       //SE RECOGEN LOS DATOS DE LA DIRECCIÓN DE LA API
-      const response = await fetch(`http://localhost:3003/game?game=${id}` , {
+      const response = await fetch(`http://localhost:3003/games?game=${id}` , {
         headers: new Headers({
           'Authorization': 'Bearer julenverne'
       }), 
@@ -56,13 +56,12 @@ export default function Videogame() {
         <main className='container'>
           <HeaderOnVideogames data={data}>{(document.title = `${data.name}`)}</HeaderOnVideogames>
           <Overview data={data} />
-          <section id='storesAndReviews' className='row'>   
-            {/* <Reviews data={data} /> */}
+          <section id='storesAndReviews' className='row'>
           </section>
           <section id='misc' className='row'>
-            {/* <Screenshots data={data} /> */}
           </section>
-          {/* <SimilarVideogames data={data} /> */}
+          <DataForm data={data} setData={setData}/>
+          <ReviewForm data={data} setData={setData}/>
         </main>
       ) : (
         <VideogameLoad>{(document.title = 'Cargando juego...')}</VideogameLoad>

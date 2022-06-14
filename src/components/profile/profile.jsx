@@ -2,7 +2,7 @@ import React, { useState, useEffect, useCallback } from "react";
 import 'bootstrap/dist/css/bootstrap.css';
 import {Data, Reviews} from "./userData";
 import ProfileLoad from "./profileLoad";
-import { Card } from "react-bootstrap";
+import { Card, Accordion } from "react-bootstrap";
 
 const Profile = () => {
 
@@ -30,22 +30,35 @@ const Profile = () => {
       }, [getRawgApi]);
 
     return (
-        <div >
-            {data?.map(users => 
+        <div className="Profile">
+            {data?.slice(0,1).map(users => 
                 dataIsReady ? (
+                  <div>
                     <Card key={users.id}>
-                        <Card.Img src={users.image} className="Card-Img"/>
                         <Card.ImgOverlay>
                             <Card.Body>
                             <Card.Title>Nombre: {users.nickname}</Card.Title>
                             <Card.Text>
                                 Rol: {users.rol}
-                                Juegos: <Data id={users.id} />
-                                Reviews: <Reviews id={users.id}/>
                             </Card.Text>
                             </Card.Body>
                         </Card.ImgOverlay>
                     </Card>
+                    <Accordion title="Juegos" id="nav-dropdown">
+                      <Accordion.Item eventKey="0">
+                        <Accordion.Header>Juegos</Accordion.Header>
+                        <Accordion.Body>
+                          <Data id={users.id} />
+                        </Accordion.Body>
+                      </Accordion.Item>
+                      <Accordion.Item eventKey="1">
+                        <Accordion.Header>Reviews</Accordion.Header>
+                        <Accordion.Body>
+                          <Reviews id={users.id}/>
+                        </Accordion.Body>
+                      </Accordion.Item>  
+                    </Accordion>
+                  </div>  
                 ) : (
                     <ProfileLoad key={users.id}/>
                 ))}

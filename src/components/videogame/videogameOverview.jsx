@@ -21,7 +21,7 @@ export default function Overview({ data }) {
 
   const getPoster = () => {
     try {
-      let poster;
+      let poster = data.image;
       if (data.image) {
         data.image.match(/media\/screenshots/)
           ? (poster = data.image.replace('media/screenshots', 'media/crop/600/400/screenshots'))
@@ -97,7 +97,7 @@ export default function Overview({ data }) {
       className='row text-white img-background details-background'
       style={{ backgroundImage: bgImage }}>
       <summary className='col-md-3 my-3' style={{ cursor: 'default' }}>
-        <img src={getPoster()} alt='poster' className='img-style' />
+        <img src={data.image} alt='poster' className='img-style' />
         <div className='my-3'>
           <h4>Información:</h4>
           <ul className='list-unstyled'>
@@ -112,7 +112,7 @@ export default function Overview({ data }) {
             </li>
             <li>
               <strong>Género:</strong>{' '}
-              {data.genres.map((genreElement, i) => (
+              {data.genres?.map((genreElement, i) => (
                 <Genre key={i} data={genreElement} />
               ))}
             </li>
