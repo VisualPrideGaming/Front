@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useCallback } from "react";
-import { Tabs, Tab } from "react-bootstrap"
 import Trending from "./homeTrending";
 import HomeLoad from "./homeLoad";
 
@@ -47,13 +46,7 @@ const Home = () => {
     
     return (
       <div className="home">
-        <Tabs
-            id="controlled-tab-example"
-            activeKey={key}
-            onSelect={(k) => setKey(k)}
-            fill
-        >
-          <Tab eventKey="top-rated" title="Mejores Valorados">
+        
             {topVideogameCount.map(videogames =>
               dataIsReady ? (
                 <Trending key={videogames.id} value={videogames.value} data={data} />
@@ -61,8 +54,6 @@ const Home = () => {
                 <HomeLoad key={videogames.id} />
               ) 
             )}
-          </Tab>
-        </Tabs>
       </div>
     )
 }

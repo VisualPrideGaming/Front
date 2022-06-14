@@ -29,7 +29,7 @@ export function Data(id) {
             {data?.comprado?.map((game) => (
                 
                   <Card key={`${game.id}-comprado`}>
-                    <Card.Text>Juego: {game.game_name} </Card.Text>
+                    <Card.Text>{game.game_name} </Card.Text>
                     <Card.Text>Comprado</Card.Text>
                   </Card>
                 
@@ -41,7 +41,7 @@ export function Data(id) {
             {data?.deseados?.map((game) => (
               
                 <Card key={`${game.id}-deseado`}>  
-                    <Card.Text>Juego: {game.game_name} </Card.Text>
+                    <Card.Text>{game.game_name} </Card.Text>
                     <Card.Text>Deseado</Card.Text>
                 </Card>
               
@@ -52,7 +52,7 @@ export function Data(id) {
             {data?.pasados?.map((game) => (
              
                 <Card key={`${game.id}-pasado`}>
-                    <Card.Text>Juego: {game.game_name} </Card.Text>
+                    <Card.Text>{game.game_name} </Card.Text>
                     <Card.Text>Pasado</Card.Text>
                 </Card>  
                
@@ -64,7 +64,7 @@ export function Data(id) {
               
                 <Card key={`${game.id}-favorito`}>
                   
-                    <Card.Text>Juego: {game.game_name} </Card.Text>
+                    <Card.Text>{game.game_name} </Card.Text>
                     <Card.Text>Favorito</Card.Text>
                 </Card>
               
@@ -101,7 +101,7 @@ export function Reviews(id) {
             {data?.reviews?.map((game) => (
                 
                   <Card key={`${game.id}-reviews`}>
-                    <Card.Text>Juego: {game.game_name} </Card.Text>
+                    <Card.Text>{game.game_name} </Card.Text>
                     <Card.Text>Puntuación: {game.score}<br/>{game.review}</Card.Text>
                   </Card>
             

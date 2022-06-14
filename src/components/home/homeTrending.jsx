@@ -3,7 +3,7 @@ import React, { useState, useEffect, useCallback } from 'react';
 import { Card } from "react-bootstrap";
 
 export default function Trending({ data, value }) {
-  const [setDetailsData] = useState(null);
+  /*const [setDetailsData] = useState(null);
 
   const getRawgApi = useCallback(async () => {
     
@@ -24,6 +24,8 @@ export default function Trending({ data, value }) {
   useEffect(() => {
     getRawgApi();
   }, [getRawgApi]);
+
+*/
 
   // CREANDO VARIABLES CON LOS DATOS RECOGIDOS
 
