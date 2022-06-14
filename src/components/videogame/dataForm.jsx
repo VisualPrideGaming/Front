@@ -53,13 +53,13 @@ const DataForm = ({data, setData}) => {
                   <option key="comprado" value="Comprado">
                     Comprado
                   </option>
-                  <option key="deseados" value="Deseados">
+                  <option key="deseado" value="Deseado">
                     Deseado
                   </option>
-                  <option key="favorito" value="Favorito">
+                  <option key="favoritos" value="Favoritos">
                     Favorito
                   </option>
-                  <option key="pasados" value="Pasados">
+                  <option key="pasado" value="Pasado">
                     Pasado
                   </option>
                 </Form.Select>
@@ -71,4 +71,3 @@ const DataForm = ({data, setData}) => {
 
 export default DataForm;
 
-                

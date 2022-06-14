@@ -56,10 +56,6 @@ export default function Videogame() {
         <main className='container'>
           <HeaderOnVideogames data={data}>{(document.title = `${data.name}`)}</HeaderOnVideogames>
           <Overview data={data} />
-          <section id='storesAndReviews' className='row'>
-          </section>
-          <section id='misc' className='row'>
-          </section>
           <DataForm data={data} setData={setData}/>
           <ReviewForm data={data} setData={setData}/>
         </main>
