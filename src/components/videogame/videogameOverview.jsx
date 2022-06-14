@@ -94,7 +94,7 @@ export default function Overview({ data }) {
   return (
     <section
       id='videogameSummary'
-      className='row text-white img-background details-background'
+      className='row text-black img-background details-background'
       style={{ backgroundImage: bgImage }}>
       <summary className='col-md-3 my-3' style={{ cursor: 'default' }}>
         <img src={data.image} alt='poster' className='img-style' />

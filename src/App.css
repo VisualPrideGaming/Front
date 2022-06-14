@@ -13,18 +13,24 @@
 
 
 .container {
-  min-height: 462px;
+  min-height: 812px;
+  background-color: white;
+  border-radius: 10%;
+}
+
+#videogameHeader {
+  color: #000000 !important;
 }
 
 /* CSS TAJERTAS PROFILE */
 
-.Profile {
+.profile {
   text-decoration: none;
   margin-left: 20%;
   margin-right: 20%;
   margin-top: 10px;
   z-index: 1;
-  color:red;
+  color:black !important;
   min-height: 802px;
 }
 

@@ -3,6 +3,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 import {Data, Reviews} from "./userData";
 import ProfileLoad from "./profileLoad";
 import { Card, Accordion } from "react-bootstrap";
+import gamingProfile from "../../images/userProfile.jpg"
 
 const Profile = () => {
 
@@ -30,11 +31,12 @@ const Profile = () => {
       }, [getRawgApi]);
 
     return (
-        <div className="Profile">
+        <div >
             {data?.slice(0,1).map(users => 
                 dataIsReady ? (
-                  <div>
+                  <div className="profile">
                     <Card key={users.id}>
+                        <Card.Img src={gamingProfile} alt="profile image" height="auto"/>
                         <Card.ImgOverlay>
                             <Card.Body>
                             <Card.Title>Nombre: {users.nickname}</Card.Title>
